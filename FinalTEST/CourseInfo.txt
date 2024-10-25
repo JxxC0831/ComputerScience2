@@ -1,0 +1,352 @@
+Coutse Info: 
+	Course Name: CISC	1100	R01	Structures of Computer Science
+	Course Credits: 3
+	Course CRN: 10916
+	Prof. Name: "Seaton, Marlon A. "
+	Time: "Monday,Thursday"08:30 AM - 09:45 AM
+
+
+Coutse Info: 
+	Course Name: CISC	1100	R02	Structures of Computer Science
+	Course Credits: 3
+	Course CRN: 40113
+	Prof. Name: "Seaton, Marlon A. "
+	Time: "Tuesday,Thursday"05:30 PM - 06:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1100	R03	Structures of Computer Science
+	Course Credits: 3
+	Course CRN: 49833
+	Prof. Name: "Pastine, Michael A. "
+	Time: "Tuesday,Friday"08:30 AM - 09:45 AM
+
+
+Coutse Info: 
+	Course Name: CISC	1100	R04	Structures of Computer Science
+	Course Credits: 3
+	Course CRN: 10931
+	Prof. Name: "Pastine, Michael A. "
+	Time: "Tuesday,Friday"01:00 PM - 02:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1100	R06	Structures of Computer Science
+	Course Credits: 3
+	Course CRN: 11217
+	Prof. Name: TBD
+	Time: "Monday,Thursday"05:30 PM - 06:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1400	R01	Discrete Structures
+	Course Credits: 4
+	Course CRN: 11222
+	Prof. Name: "Liu, Zigeng "
+	Time: "Tuesday,Friday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1400	R02	Discrete Structures
+	Course Credits: 4
+	Course CRN: 40114
+	Prof. Name: "Liu, Zigeng "
+	Time: "Tuesday,Friday"01:00 PM - 02:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1600	R01	Computer Science I
+	Course Credits: 3
+	Course CRN: 49834
+	Prof. Name: "Trovato, Karen I. "
+	Time: "Monday,Thursday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1600	R02	Computer Science I
+	Course Credits: 3
+	Course CRN: 33074
+	Prof. Name: "Trovato, Karen I. "
+	Time: "Tuesday,Friday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	1600	R03	Computer Science I
+	Course Credits: 3
+	Course CRN: 43030
+	Prof. Name: "Kounavelis, Nikitas P. "
+	Time: "Monday,Thursday"04:00 PM - 05:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1600	R04	Computer Science I
+	Course Credits: 3
+	Course CRN: 40115
+	Prof. Name: TBD
+	Time: "Monday,Thursday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1600	R06	Computer Science I
+	Course Credits: 3
+	Course CRN: 36373
+	Prof. Name: "Kounavelis, Nikitas P. "
+	Time: "Tuesday,Friday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1610	R01	Computer Science I Lab
+	Course Credits: 1
+	Course CRN: 49835
+	Prof. Name: "Trovato, Karen I. "
+	Time: "Tuesday"01:00 PM - 02:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1610	R02	Computer Science I Lab
+	Course Credits: 1
+	Course CRN: 33079
+	Prof. Name: "Trovato, Karen I. "
+	Time: "Monday" 01:00 PM - 02:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1610	R03	Computer Science I Lab
+	Course Credits: 1
+	Course CRN: 43031
+	Prof. Name: "Kounavelis, Nikitas P. "
+	Time: "Thursday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1610	R04	Computer Science I Lab
+	Course Credits: 1
+	Course CRN: 40116
+	Prof. Name: TBD
+	Time: "Wednesday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1610	R06	Computer Science I Lab
+	Course Credits: 1
+	Course CRN: 36374
+	Prof. Name: "Kounavelis, Nikitas P. "
+	Time: "Friday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	1800	R01	Introduction to Computer Programming
+	Course Credits: 3
+	Course CRN: 45467
+	Prof. Name: "Toliyat, Amir "Wednesday"02:30 PM - 05:00 PM#
+	Time: 
+
+
+Coutse Info: 
+	Course Name: CISC	1810	R01	Introduction to Computer Programming Lab
+	Course Credits: 1
+	Course CRN: 45468
+	Prof. Name: "Toliyat, Amir "Friday"02:30 PM - 03:45 PM#
+	Time: 
+
+
+Coutse Info: 
+	Course Name: CISC	2000	R02	Computer Science II
+	Course Credits: 3
+	Course CRN: 33077
+	Prof. Name: "Toliyat, Amir "
+	Time: "Tuesday,Friday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2000	R03	Computer Science II
+	Course Credits: 3
+	Course CRN: 36375
+	Prof. Name: "Toliyat, Amir "
+	Time: "Monday,Thursday"04:00 PM - 05:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2010	R02	Computer Science II Lab
+	Course Credits: 1
+	Course CRN: 33081
+	Prof. Name: "Toliyat, Amir "
+	Time: "Wednesday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2010	R03	Computer Science II Lab
+	Course Credits: 1
+	Course CRN: 36376
+	Prof. Name: "Toliyat, Amir "
+	Time: "Wednesday"01:00 PM - 02:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2100	R01	Discrete Structures II
+	Course Credits: 3
+	Course CRN: 27200
+	Prof. Name: "Liu, Zigeng "
+	Time: "Tuesday,Friday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	2100	R02	Discrete Structures II
+	Course Credits: 3
+	Course CRN: 40117
+	Prof. Name: "Liu, Zigeng "
+	Time: "Monday,Thursday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2110	R01	Discrete Structures II Lab
+	Course Credits: 1
+	Course CRN: 27201
+	Prof. Name: "Liu, Zigeng "
+	Time: "Wednesday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	2110	R02	Discrete Structures II Lab
+	Course Credits: 1
+	Course CRN: 40118
+	Prof. Name: "Liu, Zigeng "
+	Time: "Wednesday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2200	R01	Data Structures
+	Course Credits: 4
+	Course CRN: 11231
+	Prof. Name: TBD
+	Time: "Tuesday,Friday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	2200	R02	Data Structures
+	Course Credits: 4
+	Course CRN: 28460
+	Prof. Name: "Li, Yanjun "
+	Time: "Monday,Thursday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2350	R01	Information and Web Programming
+	Course Credits: 4
+	Course CRN: 49836
+	Prof. Name: "Toliyat, Amir "
+	Time: "Monday,Thursday"05:30 PM - 06:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2500	R01	Information and Data Management
+	Course Credits: 4
+	Course CRN: 49837
+	Prof. Name: "Kounavelis, Nikitas P. "
+	Time: "Tuesday,Friday"01:00 PM - 02:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	2540	R01	Introduction to Video Game Design
+	Course Credits: 4
+	Course CRN: 45469
+	Prof. Name: "Biswas, Sharang "
+	Time: "Monday,Thursday"04:00 PM - 05:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	3500	R01	Database Systems
+	Course Credits: 4
+	Course CRN: 11234
+	Prof. Name: "Chen, Sanchuan "
+	Time: "Monday,Thursday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	3580	R01	Cybersecurity and Applications
+	Course Credits: 4
+	Course CRN: 33091
+	Prof. Name: TBD
+	Time: "Monday"06:00 PM - 08:30 PM
+
+
+Coutse Info: 
+	Course Name: CISC	3593	R01	Computer Organization
+	Course Credits: 4
+	Course CRN: 21114
+	Prof. Name: "Trovato, Karen I. "
+	Time: "Monday,Thursday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	3595	R01	Operating Systems
+	Course Credits: 4
+	Course CRN: 36380
+	Prof. Name: TBD
+	Time: "Tuesday,Friday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	3650	R01	Forensic Computing
+	Course Credits: 4
+	Course CRN: 49838
+	Prof. Name: "Flatley, Stephen R. "
+	Time: "Monday"06:00 PM - 08:30 PM
+
+
+Coutse Info: 
+	Course Name: CISC	4001	R01	Computers and Robots in Film
+	Course Credits: 4
+	Course CRN: 33092
+	Prof. Name: TBD
+	Time: "Tuesday"08:30 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	4006	R01	Brains and Behavior in Beasts and Bots
+	Course Credits: 4
+	Course CRN: 49839
+	Prof. Name: "Lyons, Damian M. "
+	Time: "Monday,Thursday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	4080	R01	Computer Algorithms
+	Course Credits: 4
+	Course CRN: 11236
+	Prof. Name: TBD
+	Time: "Tuesday,Friday"11:30 AM - 12:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	4090	R01	Theory of Computation
+	Course Credits: 4
+	Course CRN: 33094
+	Prof. Name: "Hsu, Derbiau F. "
+	Time: "Monday,Thursday"10:00 AM - 11:15 AM
+
+
+Coutse Info: 
+	Course Name: CISC	4615	R01	Data Communications and Networks
+	Course Credits: 4
+	Course CRN: 11237
+	Prof. Name: TBD
+	Time: "Tuesday,Friday"02:30 PM - 03:45 PM
+
+
+Coutse Info: 
+	Course Name: CISC	4631	R01	Data Mining
+	Course Credits: 4
+	Course CRN: 33095
+	Prof. Name: "Bhuiyan, Zakirul Alam "
+	Time: "Monday,Thursday"04:00 PM - 05:15 PM
+
+
+Coutse Info: 
+	Course Name: CISC	4650	R01	Cyberspace: Issues and Ethics
+	Course Credits: 4
+	Course CRN: 40121
+	Prof. Name: TBD
+	Time: "Tuesday,Friday"01:00 PM - 02:15 PM
+
+
