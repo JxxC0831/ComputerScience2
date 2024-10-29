@@ -1,88 +1,90 @@
+/*
+    @inplement file Course.cpp
+    @Author: Jiaxuan Cao
+    @Last modify time: May 12, 2023
+*/
 #include"Course.h"
 #include<iostream>
+#include<sstream>
 #include<string>
 
 using namespace std;
 
-Course::Course(){
-    CourseName="";
-    CourseCredits=-1;
-    CourseCRN=-1;
-    ProfName="";
-    Time="";
-}
+Course::Course(){}
 
 Course::Course(string wholeline)
 {
-    int coursenameend = wholeline.find("!");
-    CourseName = wholeline.substr(0,coursenameend);
-    int coursecreditend = wholeline.find("@");
-    CourseCredits = wholeline.substr(coursenameend+1,coursecreditend-coursenameend-1);
-    int coursecrnend = wholeline.find("#");
-    CourseCRN = wholeline.substr(coursecreditend+1,coursecrnend-coursecreditend-1);
-    int profnameend = wholeline.find("*");
-    ProfName = wholeline.substr(coursecrnend+1,profnameend-coursecrnend-1);
-    Time = wholeline.substr(profnameend+1);
+    stringstream ss(wholeline);
+    getline(ss,CourseName,'@');
+    getline(ss,CourseCredits,'\t');
+    getline(ss,CourseCRN,'\t');
+    getline(ss,ProfName,'\t');
+    getline(ss,Time,'#');
+};
 
-}
-
-void Course::SetCourseName(string classname)
-{
+void Course::SetCourseName(string classname) {
     CourseName = classname;
 }
 
-void Course::SetCourseCredits(string credits)
-{
+void Course::SetCourseCredits(string credits) {
     CourseCredits = credits;
 }
-void Course::SetCourseCRN(string num)
-{
+
+void Course::SetCourseCRN(string num) {
     CourseCRN = num;
 }
-        
-void Course::SetProfName(string profname)
-{
+
+void Course::SetProfname(string profname) {
     ProfName = profname;
 }
-void Course::SetTime(string time)
-{
+
+void Course::SetCourseTime(string time) {
     Time = time;
 }
 
-bool Course::operator==(const Course & anothercourse)
-{
-    if(CourseCRN == anothercourse.CourseCRN)
-        return true;
-    else
-        return false;
-}
-	
-string Course::GetCourseName() const
-{
+string Course::GetCourseName() const {
     return CourseName;
 }
-string Course::GetCourseCredits() const
-{
+
+string Course::GetCourseCredits() const {
     return CourseCredits;
 }
-string Course::GetCourseCRN() const
-{
+
+string Course::GetCourseCRN() const {
     return CourseCRN;
 }
-string Course::GetProfName() const
-{
+
+string Course::GetProfname() const {
     return ProfName;
 }
-string Course::GetTime() const
-{
+
+string Course::GetCourseTime() const {
     return Time;
 }
-void Course::PrintInfo()
+
+bool Course::operator==(const Course &c1) const
 {
-    cout << "Course Info:"<<endl;
-    cout << "\tCourse Name: " << CourseName << endl;
-    cout << "\tCourse Credits: " << CourseCredits << endl;
-    cout << "\tCourse CRN: " << CourseCRN << endl;
-    cout << "\tProf. Name: " << ProfName << endl;
-    cout << "\tTime: " << Time << endl;
+    return this->Time == c1.Time;
+}
+ostream& operator <<(ostream& os,const Course& s)
+{
+    os << "Coutse Info: "<<endl;
+    os << "\tCourse Name: " << s.GetCourseName() << endl;
+    os << "\tCourse Credits: " << s.GetCourseCredits() << endl;
+    os << "\tCourse CRN: " <<s.GetCourseCRN() << endl;
+    os << "\tProf. Name: " << s.GetProfname() << endl;
+    os << "\tTime: " << s.GetCourseTime() << endl;
+    os <<endl;
+
+    return os;
+}
+
+void Course::PrintInfo() {
+    cout << "Coutse Info: "<<endl;
+    cout << "Course Name: " << CourseName << endl;
+    cout << "Course Credits: " << CourseCredits << endl;
+    cout << "Course CRN: " << CourseCRN << endl;
+    cout << "Prof. Name: " << ProfName << endl;
+    cout << "Time: " << Time << endl;
+    cout <<endl;
 }

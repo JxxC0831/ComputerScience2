@@ -1,5 +1,11 @@
-#ifndef NAME_H
-#define NAME_H
+/*
+    @Name.h file
+    @author:Jiaxuan Cao
+    @last modify time: May 12, 2023
+*/
+#ifndef NAMEH
+#define NAMEH
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -7,20 +13,20 @@ using namespace std;
 class Name{
     public:
         Name();//default constructor
-        Name(string wholeline);//parse wholeline and assign privetes 
-        void setFirstName(string fname);//set First Name
-        void setLastName(string lname);// set Last Name
-        string getFirstName();//First name getter
-        string getLastName();//Getter 
+        Name(string wholeline);
+        void setFirstName(string firstname);//set first name
+        void setLastName(string lastname);//set last name
+        void setFullName(string fullname);//set full name
+        string getFirstName() const;//get first name
+        string getLastName() const;//get last name
+        string getFullName() const;//get full name
 
-        void printname();//print Name
+        void PrintName();  //print name
 
     private:
-        string fname;//first name
-        string lname;//last name
-        
-    
-
-
+        string fname;
+        string lname;
+        string fullname;
 };
+
 #endif

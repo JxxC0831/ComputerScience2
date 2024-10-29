@@ -1,102 +1,231 @@
+/*
+    @this program is to read in two files, one is course information, the other is student with their crns. 
+    @it will print out the course information and student with their courses selection in two files.
+    @it allowed user to search student and generate courses information for that student.
+    @author:Jiaxuan Cao
+    @last modify time: May 12, 2023
+    @known bugs: none
+    @version: Final version
+*/
 #include<iostream>
-#include<fstream>
-#include<sstream>
-#include<vector>
 #include<string>
-#include"UnivMember.h"
-#include"Name.h"
-#include"ID.h"
+#include<vector>
+#include<sstream>
+#include<fstream>
 #include"Course.h"
+#include"Name.h"
+#include"Student.h"
 using namespace std;
 
 int main()
 {
-    ifstream infile1, infile2;
+    ifstream infile1, infile2;//open two files
+    string filename1="CoursesFall2023Tab.txt" , filename2 = "StudentswithCRN.txt";
+    infile1.open(filename1);
+    infile2.open(filename2);
 
-    infile1.open("CoursesFall2023Tab.txt");//open file1
-    infile2.open("StudentsWithCRNs.txt");//open file2
-
-    if(!infile1 || !infile2)//check if file is open
+    if(!infile1 || !infile2)//if file open failure
     {
-        cout << "File open failure"<<endl;
+        cout <<"File open failure" <<endl;
         return 0;
     }
-
-
-/*
-//list of courses
-    vector<UnivMember*> courselist;
-
-    string line;//change name
-    while(getline(infile1, line))
+    else
     {
-        UnivMember *coursePtr = new UnivMember(line);
-        courselist.push_back(coursePtr);
+        cout <<filename1 << " open successfully." <<endl;
+        cout << filename2 << " open successfully." <<endl;
+        cout << "Processing data..."<<endl;
+        cout << "Done!" <<endl;
+        cout << endl;
     }
 
-   */
-//list of students 
-    vector<UnivMember> studentlist;
-    string studentwholeline;
 
-    while(getline(infile2,studentwholeline))
-    {   
-        string courses1,course2,course3,course4,course5;
-        UnivMember student(studentwholeline,"Name");
-        student.setCourseCRN(studentwholeline);
-        courses1=student.getCourseCRN1(studentwholeline);
-        course2=student.getCourseCRN2(studentwholeline);
-        course3=student.getCourseCRN3(studentwholeline);
-        course4=student.getCourseCRN4(studentwholeline);
-        course5=student.getCourseCRN5(studentwholeline);
-        
-        studentlist.push_back(student);
-       
+    vector<Course>courselist;//create a vector to store course information
+    string wholeline;//read in whole line
+    while(getline(infile1, wholeline))//read in line by line
+    {
+        Course course(wholeline);
+        courselist.push_back(course);
+    }
+    infile1.close();
+    
+    
+    string line;
+    vector<Name*> studentlist;//create a vector to store student information
+    vector<Student*> crnlist;//create a vector to store student with crn information
+    while(getline(infile2,line))
+    {
+        Name *studentname = new Name(line);
+        studentlist.push_back(studentname);
+        Student *crns = new Student(line);
+        crnlist.push_back(crns);
+
 
     }
-
-for(int i=0; i<studentlist.size();i++)
-{
-   studentlist[i].PrintUnivMember();
-   cout <<"Course selected: "<<endl;
-    cout << studentlist[i].getCourseCRN1(studentwholeline)<<endl;
-    cout << studentlist[i].getCourseCRN2(studentwholeline)<<endl;
-    cout << studentlist[i].getCourseCRN3(studentwholeline)<<endl;
-    cout << studentlist[i].getCourseCRN4(studentwholeline)<<endl;
-    cout << studentlist[i].getCourseCRN5(studentwholeline)<<endl;
-    cout << endl;
-}
-
-/*
-//print out 
-    for(int i=0;i<courselist.size();i++)
+    infile2.close();
+    
+    //print out course information in a file
+    ofstream outfile;//open a file to write in
+    string outfilename = "CourseInfo.txt";
+    outfile.open(outfilename);
+    if(!outfile)
     {
-        courselist[i]->PrintUnivCourse();
+        cout << "No such file for read in"<<endl;
+        return 0;
+    }
+    else
+    {
+        cout << outfilename << " open successfully!"<<endl;
+        cout << "Processing data..."<<endl;
+        cout << "Done!" <<endl;
+        cout << "Please check data in "<<outfilename<<endl;
+        cout <<endl;
+    }
+
+
+    for(int i=0; i<courselist.size();i++)
+    {
+
+        outfile << courselist[i];
+        outfile <<endl;
+ 
+    }
+    outfile.close();
+
+
+    //print out student with their course information in a file
+    ofstream outfile2;
+    string outfilename2 = "StudentswithCourseInfo.txt";
+    outfile2.open(outfilename2);
+   //Check if file open successfully
+    if(!outfile2)
+    {
+        cout << "Cannot find StudentswithCourseInfo.txt"<<endl;
+    }
+    else
+    {
+        cout << outfilename2 << " open successfully!"<<endl;
+        cout << "Processing data..."<<endl;
+        cout << "Done!" <<endl;
+        cout << "Please check data in "<<outfilename2<<endl;
+        cout <<endl;
     }
 
     for(int i=0;i<studentlist.size();i++)
     {
-       studentlist[i]->PrintUnivMember();
+
+        outfile2 << "Student Name: " << studentlist[i]->getFullName()<<endl;
+        outfile2 << "Course Taken in detail: " <<endl;
+        for(int j=0;j<courselist.size();j++)
+        {
+            if(crnlist[i]->getCRN1() == courselist[j].GetCourseCRN())
+            {
+               outfile2 << courselist[j];;
+
+            }
+    
+            if(crnlist[i]->getCRN2() == courselist[j].GetCourseCRN())
+            {
+
+               outfile2 << courselist[j];
+            }
+            if(crnlist[i]->getCRN3() == courselist[j].GetCourseCRN())
+            {
+                outfile2 << courselist[j];
+
+            }
+           if(crnlist[i]->getCRN4() == courselist[j].GetCourseCRN())
+            {
+               outfile2 << courselist[j];
+               
+            }
+           if(crnlist[i]->getCRN5() == courselist[j].GetCourseCRN())
+            {
+               outfile2 << courselist[j];
+               
+            } 
+        }
+
+    }  
+               
+    outfile2.close();  
+
+    //search student and print out their course information
+    char choice;
+    char ch;
+    string fname, lname;
+
+    cout << "Do you want to search for students?(y/n)"<<endl;
+    cin >> choice;
+    
+    while(choice == 'y')
+    {
+
+        cout << "Please enter the student's name(first+last): "<<endl;
+        cin >> fname >> lname;
+        string name;
+        name = fname + " " + lname;
+
+
+        for(int i=0;i<studentlist.size();i++)
+        {
+            studentlist[i]->getFullName();
+            if(name == studentlist[i]->getFullName())
+            {
+                cout << "Find it! Here are clases he/she choosed"<<endl;
+                for(int j=0;j<courselist.size();j++)
+                {
+                
+                    if(crnlist[i]->getCRN1() == courselist[j].GetCourseCRN())
+                    {
+                        cout << courselist[j];;
+                    }
+                    
+                    if(crnlist[i]->getCRN2() == courselist[j].GetCourseCRN())
+                    {
+
+                        cout << courselist[j];
+                    }
+                    if(crnlist[i]->getCRN3() == courselist[j].GetCourseCRN())
+                    {
+                        cout << courselist[j];
+
+                    }
+                    if(crnlist[i]->getCRN4() == courselist[j].GetCourseCRN())
+                    {
+                        cout<<courselist[j];
+                            
+                    }
+                    if(crnlist[i]->getCRN5() == courselist[j].GetCourseCRN())
+                    {
+                        cout << courselist[j];
+                            
+                    } 
+                    
+
+                }
+                break;
+            }
+        }
+            cout << "Do you want to search for students?(y/n)"<<endl;
+            cin >> choice;
+
     }
 
 
+    
 
 
-
-//delete
-    for(int i=0;i<studentlist.size();i++)
+   
+    //delete dynamic memory
+    for(int i=0; i<studentlist.size();i++)
     {
         delete studentlist[i];
     }
-
-    for(int i=0;i<courselist.size();i++)
+    for(int i=0; i<crnlist.size();i++)
     {
-        delete courselist[i];
+        delete crnlist[i];
     }
-    */
-
-    infile1.close();
-    infile2.close();
+    
 
 
     return 0;

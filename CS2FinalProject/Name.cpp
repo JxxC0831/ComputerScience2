@@ -1,64 +1,65 @@
+/*
+    @Impletation of Name.h
+    @author: Jiaxuan Cao
+    @last modify time: May 12, 2023
+
+*/
 #include"Name.h"
 #include<iostream>
 #include<string>
-
+#include<sstream>
 using namespace std;
 
 Name::Name()
 {
-    fname="";
-    lname="";
+    fname="no fname";
+    lname="no lname";
 }
 
 Name::Name(string wholeline)
 {
-    int pos = wholeline.find(",");  
-
-    int i=wholeline.length()-1;
-    if(wholeline.at(i)==' ')
-    {
-       wholeline.erase(wholeline.size()-1);
-    }
-
-
-    int namepos = wholeline.find("@");
-    lname = wholeline.substr(0, pos);
-    fname= wholeline.substr(pos+1, namepos-pos-1);    
-    
-    
-
+    stringstream ss(wholeline);
+    getline(ss, fullname,'\t');
+    int pos = fullname.find(",");
+    lname = fullname.substr(2,pos-2);
+    int namepos = fullname.length();
+    fname = fullname.substr(pos+2,namepos-pos-3);
+    fullname = fname + " " + lname;
 }
 
 
-
-void Name::setFirstName(string fname)
+void Name::setFirstName(string firstname)
 {
-    
-   this->fname = fname;
-
+    fname = firstname;
 }
 
-void Name::setLastName(string lname)
+void Name::setLastName(string lastname)
 {
-    this->lname = lname;
+    lname = lastname;
 }
 
+void Name::setFullName(string name)
+{
+    name = fname + " " + lname;
+    fullname = name;
+}
 
-
-
-string Name::getFirstName() 
+string Name::getFirstName() const
 {
     return fname;
 }
-string Name::getLastName()
+
+string Name::getLastName() const
 {
     return lname;
 }
 
-void Name::printname()
+string Name::getFullName() const
 {
-    cout << fname << " " <<lname <<endl;
-    
-
+    return fullname;
 }
 
+void Name::PrintName()
+{
+    cout << "Student Name: " << fullname << endl;
+}
